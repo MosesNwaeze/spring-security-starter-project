@@ -20,7 +20,11 @@ A multi-module Spring Boot security starter with JWT authentication, role-based 
 
 ## Quick Start
 
-### 1. Clone and Build
+### 1. Clone the project
+
+### 2. Run ./gradlew clean build
+
+### 3. 
 
 
 git clone https://github.com/MosesNwaeze/spring-security-starter-project

@@ -1,4 +1,4 @@
 
-rootProject.name = 'security-starter-demo'
+rootProject.name = 'security-starter-project'
 include 'core-security-starter'
 include 'sample-application'

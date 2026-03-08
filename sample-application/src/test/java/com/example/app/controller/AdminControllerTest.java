@@ -4,6 +4,7 @@ import com.example.app.entities.ApplicationUser;
 import com.example.app.enums.Roles;
 import com.example.app.repository.ApplicationUserRepository;
 import com.example.securitystarter.jwt.JwtService;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -23,6 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
+@Transactional
 class AdminControllerTest {
 
     @Autowired
@@ -53,6 +56,11 @@ class AdminControllerTest {
 
         adminToken = jwtService.generateToken(user);
 
+    }
+
+    @AfterEach
+    void tearDown() {
+      applicationUserRepository.deleteAll();
     }
 
     @Test

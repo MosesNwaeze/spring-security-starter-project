@@ -4,6 +4,7 @@ import com.example.app.entities.ApplicationUser;
 import com.example.app.enums.Roles;
 import com.example.app.repository.ApplicationUserRepository;
 import com.example.securitystarter.jwt.JwtService;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -50,6 +51,11 @@ class UserControllerTest {
 
         token = jwtService.generateToken(user);
 
+    }
+
+    @AfterEach
+    void tearDown() {
+      applicationUserRepository.deleteAll();
     }
 
     @Test

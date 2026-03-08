@@ -121,9 +121,6 @@ trace.log
 **/logging/
 
 ### DATABASE ###
-*.h2.db
-*.mv.db
-*.db
 *.sqlite
 *.sqlite3
 *.derby
@@ -451,15 +448,3 @@ application-prod.properties
 .DS_Store
 Thumbs.db
 ._*
-
-### TEST REPORTS ###
-**/test-results/
-**/reports/
-**/jacoco/
-**/test-result/
-
-### TEMP ###
-*.tmp
-*.temp
-*.swp
-*~

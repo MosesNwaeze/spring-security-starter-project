@@ -20,21 +20,16 @@ A multi-module Spring Boot security starter with JWT authentication, role-based 
 
 ## Quick Start
 
-### 1. Clone the project
+### 1. run git clone https://github.com/MosesNwaeze/spring-security-starter-project
 
-### 2. Run ./gradlew clean build
+### 2. cd spring-security-starter-project
 
-### 3. 
+### 3. run ./gradlew clean build
 
+### 4. cd sample-application/build/libs 
 
-git clone https://github.com/MosesNwaeze/spring-security-starter-project
-cd security-starter-project
-./gradlew clean build
+### 5. run java -jar sample-application-0.0.1-SNAPSHOT.jar
 
-### 2. Run the Application
-
-cd sample-application
-./gradlew bootRun
 
 The application will start on http://localhost:8080
 

@@ -175,10 +175,3 @@ Response (json):
 
     Trade-off: Computational overhead vs security
 
-
-Running Tests
-bash
-
-# Run all tests
-./gradlew test
-

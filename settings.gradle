@@ -1,0 +1,4 @@
+
+rootProject.name = 'security-starter-demo'
+include 'core-security-starter'
+include 'sample-application'
